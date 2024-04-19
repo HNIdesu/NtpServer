@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NtpServer", "NtpServer\NtpS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{5BC12F50-C00C-4215-BF7B-958866741172}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryOperator", "BinaryOperator\BinaryOperator.csproj", "{903411BA-2335-4470-A02A-72E258223C61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NtpPacket", "NtpPacket\NtpPacket.csproj", "{30119C2D-12FF-4830-94EA-8701FE4C9864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{5BC12F50-C00C-4215-BF7B-958866741172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC12F50-C00C-4215-BF7B-958866741172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC12F50-C00C-4215-BF7B-958866741172}.Release|Any CPU.Build.0 = Release|Any CPU
-		{903411BA-2335-4470-A02A-72E258223C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{903411BA-2335-4470-A02A-72E258223C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{903411BA-2335-4470-A02A-72E258223C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{903411BA-2335-4470-A02A-72E258223C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30119C2D-12FF-4830-94EA-8701FE4C9864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30119C2D-12FF-4830-94EA-8701FE4C9864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30119C2D-12FF-4830-94EA-8701FE4C9864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30119C2D-12FF-4830-94EA-8701FE4C9864}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

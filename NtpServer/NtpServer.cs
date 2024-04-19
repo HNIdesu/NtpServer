@@ -33,17 +33,14 @@ namespace HNIdesu.Net.Ntp
                     try
                     {
                         NtpPacket receivedPacket = NtpPacket.Parse(buffer);
-                        NtpPacket packetToSend = new NtpPacket()
-                        {
-                            LeapInducator = 0,
-                            VersionNumber = 4,
-                            ProtocolMode = NtpPacket.NtpProtocolMode.Server,
-                            Stratum = 1,
-                            ReferenceTimestamp = NtpTimeStamp.FromDateTime(DateTime.UtcNow),
-                            OriginateTimestamp = receivedPacket.TransmitTimestamp,
-                            ReceiveTimestamp = NtpTimeStamp.FromDateTime(receivedTime),
-                            TransmitTimestamp = NtpTimeStamp.FromDateTime(DateTime.UtcNow)
-                        };
+                        var packetToSend = NtpPacket.NewBuilder()
+                            .SetLeapInducator(0)
+                            .SetProtocolMode(NtpPacket.NtpProtocolMode.Server)
+                            .SetStratum(1)
+                            .SetReferenceTimestamp(NtpTimeStamp.FromDateTime(DateTime.UtcNow))
+                            .SetOriginateTimestamp(receivedPacket.TransmitTimestamp)
+                            .SetReceiveTimestamp(NtpTimeStamp.FromDateTime(receivedTime))
+                            .SetTransmitTimestamp(NtpTimeStamp.FromDateTime(DateTime.UtcNow)).Build();
                         Send(packetToSend.ToBytes(), endPoint);
                     }
                     catch (Exception e)

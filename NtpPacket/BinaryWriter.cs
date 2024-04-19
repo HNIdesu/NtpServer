@@ -2,14 +2,10 @@
 
 namespace HNIdesu.IO
 {
-    public class BinaryWriter:IDisposable
-    { 
-        public Stream BaseStream { get;private set; }
+    public class BinaryWriter(Stream stream) : IDisposable
+    {
+        public Stream BaseStream { get; private set; } = stream;
         public bool IsBigEndian { get; set; } = false;
-        public BinaryWriter(Stream stream)
-        {
-            BaseStream = stream;
-        }
 
         public void WriteByte(byte item)
         {
